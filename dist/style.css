@@ -1,0 +1,14 @@
+#head {
+    background-color: rgb(236, 102, 69);
+    padding: 50px;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}
+
+.card-header {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
