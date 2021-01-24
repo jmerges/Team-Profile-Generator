@@ -13,10 +13,6 @@ function promptManager() {
             name: "name"
         },
         {
-            message: "Please enter the manager's ID",
-            name: "ID"
-        },
-        {
             message: "Please enter the manager's email",
             name: "email"
         },
@@ -25,7 +21,7 @@ function promptManager() {
             name: "officeNumber"
         }
     ]).then(data => {
-        var mngr = new Manager(data.name, data.ID, data.email, data.officeNumber);
+        var mngr = new Manager(data.name, employees.length+1, data.email, data.officeNumber);
         employees.push(mngr);
         menu();
     });
@@ -63,10 +59,6 @@ function addIntern() {
             name: "name"
         },
         {
-            message: "Please enter the intern's ID",
-            name: "ID"
-        },
-        {
             message: "Please enter the intern's email",
             name: "email"
         },
@@ -75,7 +67,7 @@ function addIntern() {
             name: "school"
         }
     ]).then(data => {
-        var intrn = new Intern(data.name, data.ID, data.email, data.school);
+        var intrn = new Intern(data.name, employees.length+1, data.email, data.school);
         employees.push(intrn);
         menu();
     });
@@ -88,10 +80,6 @@ function addEngineer() {
             name: "name"
         },
         {
-            message: "Please enter the engineer's ID",
-            name: "ID"
-        },
-        {
             message: "Please enter the engineer's email",
             name: "email"
         },
@@ -100,7 +88,7 @@ function addEngineer() {
             name: "github"
         }
     ]).then(data => {
-        var engi = new Engineer(data.name, data.ID, data.email, data.github);
+        var engi = new Engineer(data.name, employees.length+1, data.email, data.github);
         employees.push(engi);
         menu();
     });
